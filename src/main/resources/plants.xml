@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flower>
+    <Plant>
+        <Name>Rose</Name>
+        <Soil>Soil</Soil>
+        <Origin>Europe</Origin>
+
+        <VisualParameters>
+            <StemColor>Green</StemColor>
+            <LeafColor>Green</LeafColor>
+            <Size>Medium</Size>
+        </VisualParameters>
+
+        <GrowingTips>
+            <Temperature>20-25</Temperature>
+            <Lighting>Sunlight</Lighting>
+            <Watering>Once a week</Watering>
+        </GrowingTips>
+
+        <Multiplying>Seeds</Multiplying>
+    </Plant>
+</flower>

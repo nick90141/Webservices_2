@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+    <xs:element name="Flower">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="Plant" type="PlantType" minOccurs="1" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="PlantType">
+        <xs:sequence>
+            <xs:element name="Name" type="xs:string"/>
+            <xs:element name="Soil" type="SoilType"/>
+            <xs:element name="Origin" type="xs:string"/>
+            <xs:element name="VisualParameters" type="VisualParametersType"/>
+            <xs:element name="GrowingTips" type="GrowingTipsType"/>
+            <xs:element name="Multiplying" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="SoilType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Soil"/>
+            <xs:enumeration value="Sandy"/>
+            <xs:enumeration value="Clay"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="VisualParametersType">
+        <xs:sequence>
+            <xs:element name="StemColor" type="xs:string"/>
+            <xs:element name="LeafColor" type="xs:string"/>
+            <xs:element name="Size" type="SizeType"/>
+        </xs:sequence>
+    </xs:complexType>
+
+    <xs:simpleType name="SizeType">
+        <xs:restriction base="xs:string">
+            <xs:enumeration value="Small"/>
+            <xs:enumeration value="Medium"/>
+            <xs:enumeration value="Large"/>
+        </xs:restriction>
+    </xs:simpleType>
+
+    <xs:complexType name="GrowingTipsType">
+        <xs:sequence>
+            <xs:element name="Temperature" type="xs:string"/>
+            <xs:element name="Lighting" type="xs:string"/>
+            <xs:element name="Watering" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+</xs:schema>
